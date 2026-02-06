@@ -1,0 +1,12 @@
+pipeline{
+  agent any
+  stages{
+    stage('build'){
+      steps{
+        sh 'cd /home/vbit/GIT/cmd'
+        sh 'sudo javac Hello.java'
+        sh 'sudo java Hello'
+      }
+    }
+  }
+}
